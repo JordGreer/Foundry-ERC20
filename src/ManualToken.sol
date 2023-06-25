@@ -2,7 +2,7 @@
 pragma solidity ^0.8.18;
 
 
-Contract ManualToken{
+contract mManualToken {
 
     mapping(address => uint256) s_balances;
 
