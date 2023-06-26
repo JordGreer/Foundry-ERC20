@@ -26,7 +26,7 @@ contract OurTokenTest is Test {
         ourToken.transfer(bob, STARTING_BALANCE);
     }
 
-    /* function testBobBalance() public {
+    function testBobBalance() public {
         assertEq(ourToken.balanceOf(bob), STARTING_BALANCE);
     }
 
@@ -36,7 +36,7 @@ contract OurTokenTest is Test {
         assertEq(ourToken.balanceOf(alice), 10 ether);
     }
 
-    function testAllowances() public {
+    /* function testAllowances() public {
         uint256 initialAllowance = 1000;
 
         vm.prank(bob);
@@ -52,12 +52,12 @@ contract OurTokenTest is Test {
             ourToken.allowance(bob, alice),
             initialAllowance - transferAmount
         );
-        assertEq(ourToken.balanceOf(bob), STARTING_BALANCE - transferAmount); */
-
+        assertEq(ourToken.balanceOf(bob), STARTING_BALANCE - transferAmount);
+    }
     function testInitialSupply() public {
         assertEq(ourToken.totalSupply(), deployer.INITIAL_SUPPLY());
     }
-
+ */
     function testUsersCantMint() public {
         vm.expectRevert();
         MintableToken(address(ourToken)).mint(address(this), 1);
